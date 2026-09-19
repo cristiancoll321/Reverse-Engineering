@@ -8,7 +8,7 @@ Dos maquetas visuales hechas con Ionic y Angular a partir de referencias de inte
 
 - Composición centrada con `ion-grid`, `ion-row` e `ion-col`.
 - Carátula abstracta, información de pista y estado de reproducción.
-- Barra de progreso con tiempos `03:25 / 04:15`.
+- Barra de progreso con tiempos `1:58 / 2:41`.
 - Controles de reproducción construidos con Ionicons.
 
 ### Feed de Instagram
@@ -47,10 +47,6 @@ src/
 ├── app/home/home.page.ts     # Estado de navegación e iconos
 └── global.scss               # Estilos base de Ionic
 ```
-
-## Capturas
-
-La app incluye un selector superior para alternar entre las dos pantallas. Para generar capturas de entrega, ejecuta `ionic serve` y toma una captura de cada estado en el navegador.
 
 ## Validación
 
