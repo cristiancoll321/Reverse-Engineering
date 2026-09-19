@@ -1,0 +1,380 @@
+:host { 
+  --ink: #17221d;
+  --muted: #78827c; 
+  --line: #d9ded8; 
+  --lime: #d6f45c; 
+  --paper: #f4f5ef; 
+  display: block; 
+}
+ion-content { 
+  --background: 
+  var(--paper); 
+}
+.workspace-shell { 
+  max-width: 1180px; 
+  min-height: 100%; 
+  margin: 0 auto; 
+  padding: 30px 32px 20px; 
+  color: var(--ink); 
+}
+.app-header { 
+  display: flex; 
+  align-items: center; 
+  gap: 14px; 
+  border-bottom: 1px solid var(--line); 
+  padding-bottom: 22px; 
+}
+.brand-mark { 
+  display: grid; 
+  place-items: center; 
+  width: 42px; height: 42px; 
+  border-radius: 50%; 
+  background: var(--ink); 
+  color: var(--lime); 
+  font-size: 20px; 
+}
+.eyebrow, .stage-label, .page-footer, .header-status, .player-topline {
+  font-size: 10px; 
+  font-weight: 700; 
+  letter-spacing: .16em; 
+  text-transform: uppercase; 
+}
+.eyebrow { 
+  margin: 0 0 4px; 
+  color: var(--muted); 
+}
+h1 { 
+  margin: 0; 
+  font-size: clamp(24px, 4vw, 38px); 
+  letter-spacing: -.04em; line-height: 1; 
+}.header-status { 
+  margin-left: auto; 
+  color: var(--muted); 
+}
+.status-dot { 
+  display: inline-block; 
+  width: 7px; 
+  height: 7px; 
+  margin-right: 7px; 
+  border-radius: 50%; 
+  background: #91b830; 
+}
+.view-switcher {
+  display: flex; 
+  gap: 6px; 
+  margin: 25px 0 14px; 
+}
+.view-switcher button { 
+  border: 0; 
+  background: transparent; 
+  color: var(--muted); cursor: pointer; 
+  padding: 9px 15px; border-radius: 20px; 
+  font: 700 12px inherit; 
+}
+.view-switcher button.active { 
+  background: var(--ink); 
+  color: white; 
+}
+.view-switcher ion-icon { 
+  vertical-align: -2px; 
+  margin-right: 5px; 
+  font-size: 15px; 
+}
+.stage { 
+  min-height: 650px; 
+  padding: 20px 8px 30px; 
+  border-top: 1px solid var(--line); 
+}
+.stage-label { 
+  color: var(--muted); 
+}
+.stage-label span { 
+  color: var(--ink); 
+  margin-right: 12px; 
+}
+.player-grid { 
+  padding: 38px 0 0; 
+}.player-panel { 
+  max-width: 520px; 
+  margin: auto; 
+  padding: 30px; 
+  background: var(--ink); 
+  color: white; 
+  box-shadow: 16px 16px 0 #dfe5db; 
+}.player-topline { 
+  display: flex; 
+  justify-content: space-between; 
+  color: #849188; 
+}
+.player-topline ion-icon {
+  font-size: 16px;
+  color: var(--lime);
+}
+
+.album-art {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+  margin: 24px auto;
+  background: #5a1a1a; /* Fondo rojo oscuro del disco */
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.album-sun {
+  position: absolute;
+  width: 55%;
+  height: 55%;
+  right: -10%;
+  top: 7%;
+  border-radius: 50%;
+  background: #f8be4b;
+}
+
+.album-arc {
+  position: absolute;
+  width: 90%;
+  height: 70%;
+  bottom: -25%;
+  left: -19%;
+  border-radius: 50% 50% 0 0;
+  border: 42px solid #314833;
+  border-bottom: 0;
+  transform: rotate(-18deg);
+}
+
+.album-word {
+  position: absolute;
+  left: 22px;
+  bottom: 19px;
+  color: #f7fae7;
+  font-size: clamp(30px, 7vw, 62px);
+  font-weight: 900;
+  letter-spacing: -.1em;
+}
+
+.track-copy {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.track-copy h2 {
+  margin: 0;
+  font-size: 21px;
+  letter-spacing: -.04em;
+}
+
+.track-copy p {
+  margin: 5px 0 0;
+  color: #9ba69d;
+  font-size: 13px;
+}
+
+.track-heart {
+  color: var(--lime);
+  font-size: 20px;
+  margin-top: 4px;
+}
+
+.progress-wrap {
+  margin-top: 28px;
+}
+
+.progress-track {
+  position: relative;
+  height: 3px;
+  background: #526057;
+}
+
+.progress-fill {
+  display: block;
+  width: 78%;
+  height: 100%;
+  background: var(--lime);
+}
+
+.progress-thumb {
+  position: absolute;
+  top: 50%;
+  left: 78%;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: white;
+  transform: translate(-50%, -50%);
+}
+
+.timecode {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  color: #8c9890;
+  font-size: 10px;
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 20px;
+}
+
+.icon-button,
+.play-button,
+.social-actions button,
+.more-button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.icon-button {
+  font-size: 20px;
+}
+
+.icon-button.quiet {
+  color: #819087;
+  font-size: 16px;
+}
+
+.play-button {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--lime);
+  color: var(--ink);
+  font-size: 21px;
+  padding-left: 3px;
+}
+
+.social-card {
+  max-width: 610px;
+  margin: 34px auto 0;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  box-shadow: 12px 12px 0 #e1e6dd;
+  background: #fff;
+}
+
+.social-card ion-card-header {
+  padding: 16px 18px;
+}
+
+.profile-row {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #d3e95c;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #e8a47c, #3d5d55);
+  color: white;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.profile-row ion-card-title {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.profile-row ion-card-subtitle {
+  margin-top: 3px;
+  font-size: 11px;
+}
+
+.more-button {
+  margin-left: auto;
+  color: var(--muted);
+  letter-spacing: 2px;
+}
+
+.post-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.social-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 18px 4px;
+}
+
+.social-actions button {
+  padding: 0 7px 0 0;
+  color: var(--ink);
+  font-size: 25px;
+}
+
+.action-group {
+  display: flex;
+  gap: 15px;
+}
+
+.social-card ion-card-content {
+  padding: 5px 18px 20px;
+  font-size: 13px;
+}
+
+.social-card p {
+  margin: 10px 0;
+  line-height: 1.45;
+}
+
+.muted-caption {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 600px) {
+  .workspace-shell {
+    padding: 22px 18px 15px;
+  }
+
+  .header-status {
+    display: none;
+  }
+
+  .stage {
+    min-height: 620px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .player-panel {
+    padding: 23px 20px;
+    box-shadow: 8px 8px 0 #dfe5db;
+  }
+
+  .player-controls {
+    gap: 14px;
+  }
+
+  .social-card {
+    box-shadow: 7px 7px 0 #e1e6dd;
+  }
+
+  .page-footer {
+    font-size: 8px;
+  }
+}

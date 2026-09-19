@@ -1,0 +1,37 @@
+<ion-content [fullscreen]="true">
+  <main class="workspace-shell">
+    <header class="app-header">
+      <div class="brand-mark" aria-hidden="true"><ion-icon name="musical-notes"></ion-icon></div>
+      <div><p class="eyebrow">Reverse engineering lab</p><h1>Interfaces en espejo</h1></div>
+      <span class="header-status"><span class="status-dot"></span> Maquetas 02</span>
+    </header>
+    <nav class="view-switcher" aria-label="Seleccionar maqueta">
+      <button [class.active]="activeView === 'spotify'" (click)="activeView = 'spotify'"><ion-icon name="musical-notes"></ion-icon> Reproductor</button>
+      <button [class.active]="activeView === 'instagram'" (click)="activeView = 'instagram'"><ion-icon name="logo-instagram"></ion-icon> Feed social</button>
+    </nav>
+    <section class="stage" [class.instagram-stage]="activeView === 'instagram'">
+      <div class="stage-label"><span>01</span> {{ activeView === 'spotify' ? 'Spotify player' : 'Instagram post' }}</div>
+      <ion-grid *ngIf="activeView === 'spotify'" class="player-grid">
+        <ion-row class="ion-justify-content-center"><ion-col size="12" size-md="8" size-lg="6">
+          <div class="player-panel">
+            <div class="player-topline"><span>NOW PLAYING</span><ion-icon name="repeat"></ion-icon></div>
+            <div class="album-art">
+              <img src="assets/album.jpg" alt="Carátula del álbum">
+
+            </div>
+            <div class="track-copy"><div><h2>El Mejor Caballo</h2><p>Yeison Jimenez</p></div><ion-icon class="track-heart" name="heart-outline"></ion-icon></div>
+            <div class="progress-wrap"><div class="progress-track"><span class="progress-fill"></span><span class="progress-thumb"></span></div><div class="timecode"><span>1:58</span><span>2:41</span></div></div>
+            <div class="player-controls"><button class="icon-button quiet" aria-label="Aleatorio"><ion-icon name="shuffle"></ion-icon></button><button class="icon-button" aria-label="Anterior"><ion-icon name="skip-back"></ion-icon></button><button class="play-button" aria-label="Reproducir"><ion-icon name="play"></ion-icon></button><button class="icon-button" aria-label="Siguiente"><ion-icon name="skip-forward"></ion-icon></button><button class="icon-button quiet" aria-label="Repetir"><ion-icon name="repeat"></ion-icon></button></div>
+          </div>
+        </ion-col></ion-row>
+      </ion-grid>
+      <ion-card *ngIf="activeView === 'instagram'" class="social-card">
+        <ion-card-header><div class="profile-row"><div class="avatar"><span>CC</span></div><div><ion-card-title>cdcollazoss</ion-card-title><ion-card-subtitle>San Andres Island</ion-card-subtitle></div><button class="more-button" aria-label="Más opciones">•••</button></div></ion-card-header>
+        <img class="post-image" src="assets/instagram-post.jpeg" alt="Fotografía editorial de arquitectura y cielo" />
+        <div class="social-actions"><div class="action-group"><button aria-label="Me gusta"><ion-icon name="heart-outline"></ion-icon></button><button aria-label="Comentar"><ion-icon name="chatbubble-outline"></ion-icon></button><button aria-label="Compartir"><ion-icon name="send-outline"></ion-icon></button></div><button aria-label="Guardar"><ion-icon name="bookmark-outline"></ion-icon></button></div>
+        <ion-card-content><strong>1,284 Me gusta</strong><p><b>cdcollazoss</b> SAI</p><span class="muted-caption">Ver los 42 comentarios</span></ion-card-content>
+      </ion-card>
+    </section>
+    <footer class="page-footer"><span>IONIC / ANGULAR</span><span>UI STUDY · 2026</span></footer>
+  </main>
+</ion-content>
